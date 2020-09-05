@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 import userSchema from '../models/userModels';
 
-const User = mongoose.model('user', userSchema);
+const User = mongoose.model('User', userSchema);
 
 export const addNewUser = (req, res) => {
     let newUser = new User(req.body);

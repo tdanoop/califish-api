@@ -1,20 +1,20 @@
 import {
-    addNewUser,
-    getUser,
-    getUserByID,
-    updateUserByID,
-    deleteUserByID
-} from '../controllers/appControllers';
+    addProduct,
+    getProduct,
+    getProductByID,
+    updateProductByID,
+    deleteProductByID
+} from '../controllers/productControllers';
 
 import { Router } from 'express';
 const productRouter = Router();
 
-    // userRouter.route('/')
-    //     .get(getUser)
-    //     .post(addNewUser)
-    // userRouter.route('/:userId')
-    //     .get(getUserByID)
-    //     .put(updateUserByID)
-    //     .delete(deleteUserByID)
+ productRouter.route('/')
+    .get(getProduct)
+     .post(addProduct)
+ productRouter.route('/:productId')
+     .get(getProductByID)
+     .put(updateProductByID)
+     .delete(deleteProductByID)
 
 export default productRouter;
